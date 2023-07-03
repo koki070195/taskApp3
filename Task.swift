@@ -1,11 +1,16 @@
 import RealmSwift
 
-class Task : object{
-    @Presisted(primaryKey:true)var id : ObjectIdentifier
-    
+class Task: Object {
+    // 管理用 ID。プライマリーキー
+    @Persisted(primaryKey: true) var id: ObjectId
+
+    // タイトル
     @Persisted var title = ""
-    
-    @Presisted var contents = ""
-    
-    @Presisted var date = Date()
+
+    // 内容
+    @Persisted var contents = ""
+
+    // 日時
+    @Persisted var date = Date()
+
 }
